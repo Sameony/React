@@ -2,7 +2,6 @@ import "./styles.css";
 import React, { useState } from "react";
 
 var emojiDict = {
-  "🦰": "Red hairs",
   "🤪": "Crazy face",
   "🐷": "Pig",
   "🦓": "Zebra",
@@ -27,6 +26,7 @@ var emojiDict = {
   "😘": "Face Blowing a Kiss",
   "😗": "Kissing Face",
   "☺ ️": "Smiling Face",
+  "🦰": "Red hairs",
   "😚": "Kissing Face with Closed Eyes",
   "😙": "Kissing Face with Smiling Eyes",
   "😷": "Face with Medical Mask",
@@ -47,6 +47,7 @@ var myList = [];
 //   myList.push(key);
 // }
 myList = Object.keys(emojiDict);
+
 export default function App() {
   const [ans, setAns] = useState("");
   function ChangeEventHandler(changedInput) {
@@ -64,15 +65,19 @@ export default function App() {
   const [emoji, setEmoji] = useState("");
 
   function itemClickHandler(item) {
-    setEmoji(emojiDict[item]);
-    console.log(emoji);
+    setAns(emojiDict[item]);
   }
 
   return (
-    <div>
-      <h1> Check </h1>
-      <input onChange={ChangeEventHandler}></input>
-      <div>{ans}</div>
+    <div className="Container">
+      <h1> Emoji Interpreter </h1>
+      <input
+        className="inputHere marginHere"
+        onChange={ChangeEventHandler}
+      ></input>
+      <div className="largify marginHere">{ans}</div>
+
+      <div className="largify">The Emojis We Know:</div>
 
       {myList.map(function (item) {
         return (

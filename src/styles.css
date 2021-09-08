@@ -3,8 +3,36 @@
   text-align: center;
 }
 
+.pads {
+  padding: 2rem;
+}
+.marginHere {
+  margin: 0 0 3rem 1rem;
+}
+h1 {
+  font-size: 3rem;
+  color: yellowgreen;
+}
 .emojiList {
   font-size: xx-large;
-  padding: 1rem;
+  padding: 0.4rem;
   margin: 1rem;
+  cursor: pointer;
+}
+
+.Container {
+  text-align: center;
+}
+
+.largify {
+  text-align: center;
+  font-size: xx-large;
+  padding: 2rem;
+  margin: 1.3rem;
+}
+
+.inputHere {
+  width: 60%;
+  padding: 1rem;
+  font-size: large;
 }
