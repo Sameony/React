@@ -9,14 +9,20 @@
 .marginHere {
   margin: 0 0 3rem 1rem;
 }
+
 h1 {
   font-size: 3rem;
   color: yellowgreen;
 }
+
+/*The list of emojis*/
 .emojiList {
   font-size: xx-large;
   padding: 0.4rem;
   margin: 1rem;
+
+  /* changes the mouse to pointer when hovering/clicking 
+  an emoji*/
   cursor: pointer;
 }
 
@@ -31,6 +37,7 @@ h1 {
   margin: 1.3rem;
 }
 
+/*input box*/
 .inputHere {
   width: 60%;
   padding: 1rem;

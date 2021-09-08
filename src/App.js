@@ -1,6 +1,7 @@
 import "./styles.css";
 import React, { useState } from "react";
 
+//Dictionary/database of emojis
 var emojiDict = {
   "🤪": "Crazy face",
   "🐷": "Pig",
@@ -39,17 +40,16 @@ var emojiDict = {
   "🥶": "Cold Face",
   "🥴": "Woozy Face",
   "😵": "Dizzy Face",
-  "🤯": " Exploding Head"
+  "🤯": "Exploding Head/Mind Blown"
 };
-
-var myList = [];
-// for (var key in emojiDict) {
-//   myList.push(key);
-// }
-myList = Object.keys(emojiDict);
+//copying keys into an array
+var myList = Object.keys(emojiDict);
 
 export default function App() {
+  //ans will have the value for the emoji key from dict
   const [ans, setAns] = useState("");
+
+  //function for processing ans when user changes the input
   function ChangeEventHandler(changedInput) {
     if (changedInput.target.value in emojiDict) {
       setAns(emojiDict[changedInput.target.value]);
@@ -62,8 +62,7 @@ export default function App() {
     }
   }
 
-  const [emoji, setEmoji] = useState("");
-
+  //when user interacts via given emoji list, process ans
   function itemClickHandler(item) {
     setAns(emojiDict[item]);
   }
@@ -71,14 +70,19 @@ export default function App() {
   return (
     <div className="Container">
       <h1> Emoji Interpreter </h1>
+
+      {/* Input */}
       <input
         className="inputHere marginHere"
         onChange={ChangeEventHandler}
       ></input>
+
+      {/* The answer div */}
       <div className="largify marginHere">{ans}</div>
 
       <div className="largify">The Emojis We Know:</div>
 
+      {/* Traversing the array of emojis */}
       {myList.map(function (item) {
         return (
           <span
