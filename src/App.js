@@ -74,15 +74,17 @@ export default function App() {
       <input onChange={ChangeEventHandler}></input>
       <div>{ans}</div>
 
-      <ul>
-        {myList.map(function (item, index) {
-          return (
-            <li key={item} onClick={() => itemClickHandler(item)}>
-              {item}{" "}
-            </li>
-          );
-        })}
-      </ul>
+      {myList.map(function (item) {
+        return (
+          <span
+            className="emojiList"
+            key={item}
+            onClick={() => itemClickHandler(item)}
+          >
+            {item}{" "}
+          </span>
+        );
+      })}
     </div>
   );
 }
