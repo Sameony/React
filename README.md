@@ -1,4 +1,4 @@
-# Emoji Interpretor!!
+# Emoji Interpreter!!
 Created with CodeSandbox
 
 ## Check it out on:
