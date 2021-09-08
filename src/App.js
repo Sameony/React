@@ -5,15 +5,15 @@ var user = "sam";
 var color = "skyBlue";
 
 export default function App() {
-  const [counter, setcounter] = useState(0);
-  function clickEventHandler() {
-    setcounter(counter + 1);
+  const [word, setWord] = useState("");
+  function changeEventHandler(change) {
+    setWord(change.target.value);
   }
   return (
     <div className="App">
       <h1 style={{ backgroundColor: color }}>Welcome {user}</h1>
-      <button onClick={clickEventHandler}>HEllo</button>
-      {counter}
+      <input onChange={changeEventHandler}></input>
+      <div>{word}</div>
     </div>
   );
 }
