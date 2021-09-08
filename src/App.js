@@ -43,9 +43,10 @@ var emojiDict = {
 };
 
 var myList = [];
-for (var key in emojiDict) {
-  myList.push(key);
-}
+// for (var key in emojiDict) {
+//   myList.push(key);
+// }
+myList = Object.keys(emojiDict);
 export default function App() {
   const [ans, setAns] = useState("");
   function ChangeEventHandler(changedInput) {
