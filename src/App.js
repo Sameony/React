@@ -10,11 +10,17 @@ var emojiDict = {
   "🐫": "Camel",
   "🐵": "Monkey",
   "🐶": "Dog",
-  "😊": "Smiling",
   "😎": "Handsome",
   "😥": "Sad",
   "😪": "Sleepy",
-  "😆": "Funny",
+  "😆": "XD",
+  "😅": "Grinning Face with Sweat",
+  "🤣": "Rolling on the Floor Laughing",
+  "😂": "Face with Tears of Joy",
+  "🙂": "Slightly Smiling Face",
+  "🙃": "Upside-Down Face",
+  "😉": "Winking Face",
+  "😊": "Smiling Face with Smiling Eyes",
   "🤨": "Face with raised eyebrows",
   "😇": "Smiling face with halo",
   "🤩": "Star-Struck",
@@ -33,10 +39,13 @@ var emojiDict = {
   "🥶": "Cold Face",
   "🥴": "Woozy Face",
   "😵": "Dizzy Face",
-  "😵‍💫": "Face with Spiral Eyes",
   "🤯": " Exploding Head"
 };
 
+var myList = [];
+for (var key in emojiDict) {
+  myList.push(key);
+}
 export default function App() {
   const [ans, setAns] = useState("");
   function ChangeEventHandler(changedInput) {
@@ -51,11 +60,28 @@ export default function App() {
     }
   }
 
+  const [emoji, setEmoji] = useState("");
+
+  function itemClickHandler(item) {
+    setEmoji(emojiDict[item]);
+    console.log(emoji);
+  }
+
   return (
     <div>
       <h1> Check </h1>
       <input onChange={ChangeEventHandler}></input>
       <div>{ans}</div>
+
+      <ul>
+        {myList.map(function (item, index) {
+          return (
+            <li key={item} onClick={() => itemClickHandler(item)}>
+              {item}{" "}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
