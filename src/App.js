@@ -98,27 +98,30 @@ export default function App() {
 
       {/* Input */}
       <input
-        className="inputHere marginHere"
+        placeholder="Enter the emoji here "
+        className="inputHere marginHere otherFont"
         onChange={ChangeEventHandler}
       ></input>
 
       {/* The answer div */}
-      <div className="largify marginHere">{ans}</div>
+      <div className="largify">{ans}</div>
 
-      <div className="largify">The Emojis We Know:</div>
+      <section className="colorMe">
+        <div className="largify BorderMe otherFont">The Emojis We Know:</div>
 
-      {/* Traversing the array of emojis */}
-      {myList.map(function (item) {
-        return (
-          <span
-            className="emojiList"
-            key={item}
-            onClick={() => itemClickHandler(item)}
-          >
-            {item}{" "}
-          </span>
-        );
-      })}
+        {/* Traversing the array of emojis */}
+        {myList.map(function (item) {
+          return (
+            <span
+              className="emojiList"
+              key={item}
+              onClick={() => itemClickHandler(item)}
+            >
+              {item}{" "}
+            </span>
+          );
+        })}
+      </section>
     </div>
   );
 }

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Special+Elite&display=swap");
+:root {
+  --primary-color: #ffcc33;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -13,6 +17,11 @@
 h1 {
   font-size: 3rem;
   color: yellowgreen;
+  font-family: "Special Elite", cursive;
+}
+.otherFont {
+  font-family: "Akaya Kanadaka", cursive;
+  text-align: center;
 }
 
 /*The list of emojis*/
@@ -28,6 +37,7 @@ h1 {
 
 .Container {
   text-align: center;
+  /* background-color: var(--primary-color); */
 }
 
 .largify {
@@ -39,7 +49,16 @@ h1 {
 
 /*input box*/
 .inputHere {
-  width: 60%;
+  width: 50%;
   padding: 1rem;
-  font-size: large;
+  font-size: xx-large;
+}
+
+.BorderMe {
+  border: 1px solid var(--primary-color);
+  background-color: white;
+}
+.colorMe {
+  background-color: var(--primary-color);
+  padding: 1rem;
 }
