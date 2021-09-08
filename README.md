@@ -1,7 +1,7 @@
-# React
+# Emoji Interpretor!!
 Created with CodeSandbox
 
 ## Check it out on:
 https://csb-grij4.netlify.app/
-        -or-
+       <br>-or- <br>
 https://grij4.csb.app/
