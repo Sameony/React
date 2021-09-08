@@ -36,12 +36,19 @@ var emojiDict = {
   "😵‍💫": "Face with Spiral Eyes",
   "🤯": " Exploding Head"
 };
+
 export default function App() {
   const [ans, setAns] = useState("");
   function ChangeEventHandler(changedInput) {
-    if (changedInput.target.value in emojiDict)
+    if (changedInput.target.value in emojiDict) {
       setAns(emojiDict[changedInput.target.value]);
-    else setAns("Sorry, This Emoji is not registered in our database.");
+    } else {
+      if (changedInput.target.value === "") {
+        setAns("");
+      } else {
+        setAns("Sorry, This Emoji is not registered in our database.");
+      }
+    }
   }
 
   return (
